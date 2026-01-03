@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import './StatisticsSection.css';
-import AnimatedSection from './AnimatedSection';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useCountUp } from '../hooks/useCountUp';
 
@@ -11,7 +9,7 @@ interface StatCardProps {
   index: number;
 }
 
-function StatCard({ number, label, delay, index }: StatCardProps) {
+function StatCard({ number, label, delay }: StatCardProps) {
   const { ref, isVisible } = useScrollAnimation({
     threshold: 0.3,
     rootMargin: '0px',
@@ -75,3 +73,4 @@ function StatisticsSection() {
 }
 
 export default StatisticsSection;
+
