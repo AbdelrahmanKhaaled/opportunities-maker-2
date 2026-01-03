@@ -1,0 +1,254 @@
+.hero-section {
+  padding: 80px 0;
+  background-color: var(--color-white);
+  direction: rtl;
+  position: relative;
+}
+
+.hero-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.hero-content {
+  display: flex;
+  gap: 19px;
+  align-items: flex-start;
+  direction: rtl;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 0 0 481px;
+  height: 623px;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(99, 61, 0, 0.46);
+  border-radius: 15px;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 624px;
+  padding: 20px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero-text-background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 780px;
+  height: 624.135px;
+  z-index: 0;
+}
+
+.hero-background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 672px;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-title {
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  color: var(--color-white);
+  text-align: right;
+  margin: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.hero-description {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+  color: var(--color-white);
+  text-align: right;
+  margin: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.hero-button-primary {
+  background-color: var(--color-white);
+  flex-direction: row;
+}
+
+.hero-button-primary .button-text {
+  text-align: right;
+  order: 1;
+  color: var(--color-black);
+}
+
+.hero-button-primary .button-icon {
+  order: 2;
+}
+
+.button-text {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.button-icon {
+  background-color: #E4D5B7;
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.button-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-white);
+}
+
+.button-icon-secondary {
+  background-color: var(--color-beige-500);
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 28px 65px 0px rgba(88, 91, 99, 0.16);
+  flex-shrink: 0;
+}
+
+.button-icon-secondary svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-white);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section .container {
+    padding: 0 50px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-image {
+    flex: 1;
+    width: 100%;
+    height: 400px;
+  }
+
+  .hero-text {
+    min-height: auto;
+  }
+
+  .hero-text-content {
+    width: 100%;
+  }
+
+  .hero-text-background {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .hero-section .container {
+    padding: 0 24px;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .button-text {
+    font-size: 20px;
+  }
+}

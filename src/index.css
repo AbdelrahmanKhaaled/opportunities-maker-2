@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color variables - matching Figma design exactly */
+  /* Primary Colors */
+  --color-primary-dark: #633D00;
+  --color-primary-nav: #693D00;
+  --color-primary-active: #C7A86B;
+
+  /* Beige/Light Colors */
+  --color-beige-500: #E4D5B7;
+  --color-beige-400: #C7A86B;
+  --color-beige-50: #F8F4EC;
+  --color-beige-light: #F5E0B3;
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-text-main: #525252;
+  --color-text-secondary: #8F8F8F;
+  --color-gray-light: #F2F2F2;
+  
+  /* Background Colors */
+  --background: #ffffff;
+  --background-secondary: #f8f9fa;
+  --background-beige: #E4D5B7;
+  --background-light-beige: #F8F4EC;
+  
+  /* Border Colors */
+  --border-color: #E4D5B7;
+  --border-color-dark: #8F8F8F;
+  
+  /* Shadows */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0px 28px 65px 0px rgba(88, 91, 99, 0.16), 0px 4px 48px 0px rgba(30, 37, 55, 0.06);
+  
+  /* Legacy variables for compatibility */
+
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  
+  /* Typography - Al Marai font family */
+  --font-family: 'Almarai', 'Segoe UI', 'Tahoma', 'Arial', 'Cairo', 'Noto Sans Arabic', 
+    -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  
+  /* Font Sizes from Figma */
+  --font-size-button: 18px;
+  --font-size-nav: 16px;
+  --font-size-h2: 32px;
+  --font-size-h3: 32px;
+  --font-size-h4: 24px;
+  --font-size-text: 18px;
+  
+  /* Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+html {
+  direction: rtl;
+}
+
+html,
+body {
+  direction: rtl;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+}
+
+/* Ensure all elements are RTL by default */
+* {
+  direction: inherit;
+}
+
+/* Form elements RTL */
+input,
+textarea,
+select {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Text alignment for RTL */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div {
+  text-align: right;
+}
+
+/* Center text should remain center */
+[class*="center"],
+.text-center {
+  text-align: center;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
