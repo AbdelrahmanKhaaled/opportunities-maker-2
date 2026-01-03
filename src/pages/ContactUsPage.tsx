@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './ContactUsPage.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedSection from '../components/AnimatedSection';
 
 function ContactUsPage() {
   const navItems = [
@@ -82,11 +83,12 @@ function ContactUsPage() {
         onRegisterClick={handleRegisterClick}
       />
       
-      <main className="contact-us-content">
+      <main className="contact-us-content page-enter">
         <div className="container">
           {!isFormSubmitted ? (
-            <div className="contact-form-wrapper">
-              <form className="contact-form" onSubmit={handleSubmit}>
+            <AnimatedSection animationType="fade-in-up" delay={0}>
+              <div className="contact-form-wrapper">
+                <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
                     <input
@@ -150,10 +152,12 @@ function ContactUsPage() {
                   </button>
                 </div>
               </form>
-            </div>
+              </div>
+            </AnimatedSection>
           ) : !isOrderTracked ? (
-            <div className="order-tracking-wrapper">
-              <form className="order-tracking-form" onSubmit={handleTrackOrder}>
+            <AnimatedSection animationType="scale-in" delay={0}>
+              <div className="order-tracking-wrapper">
+                <form className="order-tracking-form" onSubmit={handleTrackOrder}>
                 <div className="tracking-input-wrapper">
                   <input
                     type="text"
@@ -172,9 +176,11 @@ function ContactUsPage() {
                   </button>
                 </div>
               </form>
-            </div>
+              </div>
+            </AnimatedSection>
           ) : (
-            <div className="order-details-wrapper">
+            <AnimatedSection animationType="fade-in-up" delay={0}>
+              <div className="order-details-wrapper">
               <div>
                 <div className="order-header">
                   <h2 className="order-title">رقم طلبك</h2>
@@ -249,7 +255,8 @@ function ContactUsPage() {
                   <span>طباعة</span>
                 </button>
               </div>
-            </div>
+              </div>
+            </AnimatedSection>
           )}
         </div>
       </main>

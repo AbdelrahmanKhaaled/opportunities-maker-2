@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './TestimonialsSection.css';
 import testimonial_1 from '../assets/images/testimonial_1.png';
 import testimonial_2 from '../assets/images/testimonial_2.png';
+import AnimatedSection from './AnimatedSection';
 
 function TestimonialsSection() {
   const testimonials = [
@@ -47,23 +48,25 @@ function TestimonialsSection() {
     <section className="testimonials-section">
       <div className="container">
         <div className="testimonials-content">
-          <div className="testimonials-text">
-            <h2 className="testimonials-title"># اراء عملائنا</h2>
-            <p className="testimonials-description">
-              لوريم ايبسوم دولار سيت أميت إنفيدونت كويس سيت لامبور نوسترو أيت سيت إنتروليكيشن كونسيكوات. ايبسوم أليكويب أيت كويرات بيريتيتيس. ليجاتوس سيت توب فوليتيات. إيليت، دولار تيت ليجاتوس لابوري لامبور كويرات. ارينتي لابوريس دونك،
-            </p>
-          </div>
+          <AnimatedSection animationType="fade-in-right" delay={0}>
+            <div className="testimonials-text">
+              <h2 className="testimonials-title"># اراء عملائنا</h2>
+              <p className="testimonials-description">
+                لوريم ايبسوم دولار سيت أميت إنفيدونت كويس سيت لامبور نوسترو أيت سيت إنتروليكيشن كونسيكوات. ايبسوم أليكويب أيت كويرات بيريتيتيس. ليجاتوس سيت توب فوليتيات. إيليت، دولار تيت ليجاتوس لابوري لامبور كويرات. ارينتي لابوريس دونك،
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="testimonials-cards">
             <div className="testimonials-slider">
               <div 
-                className="testimonials-track"
+                className="testimonials-track animate-smooth"
                 style={{ transform: `translateX(${currentIndex * 100}%)` }}
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="testimonial-card">
                     <div className="testimonial-header">
                       <div className="testimonial-avatar">
-                        <img src={testimonial.image} alt={testimonial.name} className="avatar-img" />
+                        <img src={testimonial.image} alt={testimonial.name} className="avatar-img hover-scale" />
                       </div>
                       <p className="testimonial-name">{testimonial.name}</p>
                     </div>

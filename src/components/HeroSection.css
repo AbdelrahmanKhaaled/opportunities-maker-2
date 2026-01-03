@@ -100,9 +100,9 @@
 
 .hero-description {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: var(--font-weight-medium);
-  line-height: normal;
+  line-height: 2rem;
   color: var(--color-white);
   text-align: right;
   margin: 0;
@@ -223,7 +223,7 @@
   }
 
   .hero-description {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -245,7 +245,7 @@
   }
 
   .hero-description {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .button-text {

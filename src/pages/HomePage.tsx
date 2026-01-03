@@ -9,6 +9,7 @@ import WorkMethodSection from '../components/WorkMethodSection';
 import ConsultantSection from '../components/ConsultantSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import BranchesSection from '../components/BranchesSection';
+import AnimatedSection from '../components/AnimatedSection';
 
 function HomePage() {
   const navItems = [
@@ -34,16 +35,34 @@ function HomePage() {
         onRegisterClick={handleRegisterClick}
       />
       
-      <main className="main-content">
-        <HeroSection />
-        <StatisticsSection />
-        <HowItWorksSection />
-        <ServicesSection />
-        <FeaturesSection />
-        <WorkMethodSection />
-        <ConsultantSection />
-        <TestimonialsSection />
-        <BranchesSection />
+      <main className="main-content page-enter">
+        <AnimatedSection animationType="fade-in-up" delay={0}>
+          <HeroSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={100}>
+          <StatisticsSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={200}>
+          <HowItWorksSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={100}>
+          <ServicesSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={200}>
+          <FeaturesSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={100}>
+          <WorkMethodSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={200}>
+          <ConsultantSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={100}>
+          <TestimonialsSection />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up" delay={200}>
+          <BranchesSection />
+        </AnimatedSection>
       </main>
 
       <Footer />

@@ -71,29 +71,19 @@
 
 .consultant-description {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: var(--font-weight-medium);
   color: var(--color-black);
-  line-height: 1.2;
+  line-height: 2rem;
   margin: 0;
   text-align: right;
   white-space: pre-wrap;
 }
 
 .consultant-image {
-  flex: 0 0 315px;
-  height: 300px;
+  flex: 0 0 415px;
+  height: 100%;
   border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-}
-
-.consultant-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-white);
-  z-index: 0;
 }
 
 .consultant-img {
@@ -148,10 +138,15 @@
   }
 
   .consultant-description {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .consultant-image {
     height: 250px;
   }
+}
+
+
+.animate-fade-in-down {
+  width: 100%;
 }

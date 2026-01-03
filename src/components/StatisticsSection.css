@@ -38,7 +38,7 @@
 
 .stat-number {
   font-family: var(--font-family);
-  font-size: 78.2px;
+  font-size: 70.2px;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-dark);
   line-height: normal;
@@ -46,7 +46,7 @@
 
 .stat-label {
   font-family: var(--font-family);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: var(--font-weight-bold);
   color: var(--color-black);
   line-height: normal;

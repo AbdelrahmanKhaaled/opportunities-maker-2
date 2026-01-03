@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './SingleBlogPage.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedSection from '../components/AnimatedSection';
 
 function SingleBlogPage() {
   const { id } = useParams<{ id: string }>();
@@ -144,34 +145,48 @@ function SingleBlogPage() {
         onRegisterClick={handleRegisterClick}
       />
       
-      <main className="single-blog-content">
+      <main className="single-blog-content page-enter">
         <div className="container">
           <div className="single-blog-wrapper">
-            <div className="blog-hero-image">
-            <span className="read-time-badge">{article.readTime}</span>
-              <img 
-                src={article.image} 
-                alt={article.title}
-                className="blog-hero-img"
-              />
-            </div>
-
-            <div className="blog-content-section">
-              <div className="blog-meta-info">
-                <span className="blog-meta-author">بقلم: {article.author}</span>
-                <span className="blog-meta-date">{article.date}</span>
+            <AnimatedSection animationType="zoom-in" delay={0}>
+              <div className="blog-hero-image">
+                <span className="read-time-badge">{article.readTime}</span>
+                <img 
+                  src={article.image} 
+                  alt={article.title}
+                  className="blog-hero-img"
+                />
               </div>
+            </AnimatedSection>
 
-              <h1 className="blog-main-title">{article.title}</h1>
+            <AnimatedSection animationType="fade-in-up" delay={100}>
+              <div className="blog-content-section">
+                <AnimatedSection animationType="fade-in-left" delay={200}>
+                  <div className="blog-meta-info">
+                    <span className="blog-meta-author">بقلم: {article.author}</span>
+                    <span className="blog-meta-date">{article.date}</span>
+                  </div>
+                </AnimatedSection>
 
-              <div className="blog-full-content">
-                {article.fullContent.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="blog-paragraph">
-                    {paragraph}
-                  </p>
-                ))}
+                <AnimatedSection animationType="fade-in-right" delay={300}>
+                  <h1 className="blog-main-title">{article.title}</h1>
+                </AnimatedSection>
+
+                <div className="blog-full-content">
+                  {article.fullContent.split('\n\n').map((paragraph, index) => (
+                    <AnimatedSection 
+                      key={index} 
+                      animationType="fade-in-up" 
+                      delay={400 + index * 100}
+                    >
+                      <p className="blog-paragraph">
+                        {paragraph}
+                      </p>
+                    </AnimatedSection>
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </main>

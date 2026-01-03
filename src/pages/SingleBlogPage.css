@@ -103,10 +103,10 @@
 
 .blog-paragraph {
   font-family: var(--font-family);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: var(--font-weight-regular);
   color: var(--color-black);
-  line-height: 1.8;
+  line-height: 2rem;
   margin: 0;
   text-align: right;
 }
@@ -167,7 +167,7 @@
   }
 
   .blog-paragraph {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.6;
   }
 
@@ -198,7 +198,7 @@
   }
 
   .blog-paragraph {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .blog-read-more-button {

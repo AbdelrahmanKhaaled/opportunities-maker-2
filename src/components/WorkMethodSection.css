@@ -112,10 +112,10 @@
 
 .step-description {
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: var(--font-weight-regular);
   color: var(--color-white);
-  line-height: normal;
+  line-height: 2rem;
   text-align: center;
   min-height: 88px;
   width: 100%;
@@ -157,7 +157,7 @@
   }
 
   .step-description {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -201,7 +201,7 @@
   }
 
   .step-description {
-    font-size: 21px;
+    font-size: 17px;
     max-width: 260px;
   }
 }
@@ -216,7 +216,7 @@
   }
 
   .step-description {
-    font-size: 20px;
+    font-size: 16px;
     max-width: 240px;
   }
 }
@@ -275,7 +275,7 @@
   }
 
   .step-description {
-    font-size: 20px;
+    font-size: 16px;
     min-height: auto;
     max-width: 100%;
     width: 100%;
@@ -324,7 +324,7 @@
   }
 
   .step-description {
-    font-size: 19px;
+    font-size: 15px;
   }
 }
 
@@ -388,7 +388,7 @@
   }
 
   .step-description {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
     padding: 0 5px;
   }
@@ -434,7 +434,7 @@
   }
 
   .step-description {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.6;
   }
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './FAQsPage.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedSection from '../components/AnimatedSection';
 
 function FAQsPage() {
   const navItems = [
@@ -68,13 +69,20 @@ function FAQsPage() {
         onRegisterClick={handleRegisterClick}
       />
       
-      <main className="faqs-page-content">
+      <main className="faqs-page-content page-enter">
         <div className="container">
-          <h1 className="faqs-page-title">الأسئلة المتكررة</h1>
+          <AnimatedSection animationType="fade-in-down" delay={0}>
+            <h1 className="faqs-page-title">الأسئلة المتكررة</h1>
+          </AnimatedSection>
           
           <div className="faqs-list">
             {faqs.map((faq, index) => (
-              <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
+              <AnimatedSection 
+                key={index} 
+                animationType="fade-in-up" 
+                delay={index * 100}
+              >
+                <div className={`faq-item ${openIndex === index ? 'open' : ''}`}>
                 <button 
                   className="faq-question"
                   onClick={() => toggleFAQ(index)}
@@ -108,7 +116,8 @@ function FAQsPage() {
                     )}
                   </div>
                 )}
-              </div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>

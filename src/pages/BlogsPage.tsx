@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './BlogsPage.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AnimatedSection from '../components/AnimatedSection';
 
 function BlogsPage() {
   const navItems = [
@@ -101,13 +102,20 @@ function BlogsPage() {
         onRegisterClick={handleRegisterClick}
       />
       
-      <main className="blogs-page-content">
+      <main className="blogs-page-content page-enter">
         <div className="container">
-          <h1 className="blogs-page-title">المقالات</h1>
+          <AnimatedSection animationType="fade-in-down" delay={0}>
+            <h1 className="blogs-page-title">المقالات</h1>
+          </AnimatedSection>
           
           <div className="blogs-grid">
-            {articles.map((article) => (
-              <article key={article.id} className="blog-card">                
+            {articles.map((article, index) => (
+              <AnimatedSection 
+                key={article.id} 
+                animationType="fade-in-up" 
+                delay={index % 3 * 100}
+              >
+                <article className="blog-card">                
                 <div className="blog-image-wrapper">
                   <span className="read-time-badge">{article.readTime}</span>
                   <img 
@@ -132,6 +140,7 @@ function BlogsPage() {
                   </Link>
                 </div>
               </article>
+              </AnimatedSection>
             ))}
           </div>
         </div>
